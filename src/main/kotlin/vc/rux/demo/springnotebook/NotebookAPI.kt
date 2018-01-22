@@ -13,8 +13,7 @@ class NotebookAPI(val noteRepo: NoteRepository) {
     @PostMapping("/")
     fun create(@RequestBody noteDto: NoteDto) {
         println("Got note to be created: $noteDto")
-        val note = Note(text = noteDto.text)
-        noteRepo.insert(note)
+        noteRepo.insert(noteDto.toModel())
     }
 
     @DeleteMapping("/{noteId}")

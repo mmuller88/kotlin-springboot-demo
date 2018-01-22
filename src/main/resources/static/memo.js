@@ -20,10 +20,8 @@ function updateNotes() {
 function saveNote() {
     var str = $("#noteText").val().trim()
     console.log(`Note to be saved: ${str}`)
-    if (str.length == 0) {
-        alert("Please put your note text")
-        return
-    }
+    if (str.length == 0)
+        return alert("Please put your note text")
 
     // create new one
     if ($("#noteId").val().length == 0) {
