@@ -74,8 +74,6 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
 <script>
     updateNotes()
@@ -93,7 +91,7 @@
             </div>
             <div class="modal-body">
                 <input id="noteId" type="hidden" />
-                <textarea id="noteText" rows="10"  style="width: 95%"></textarea>
+                <textarea id="noteText" rows="10"  style="width: 100%; overflow: hidden"></textarea>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-success" data-dismiss="modal" onclick="saveNote(); return false">Save</button>
